@@ -1,4 +1,6 @@
-
+obj/
+bin/
+*.user
 /Tests
 /Bin
 /Src/NReadability/_ReSharper.NReadability
