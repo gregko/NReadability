@@ -1,4 +1,9 @@
-
+obj/
+*.pdb
+*.dll
+*.mdb
+*.user
+*.apk
 /Tests
 /Bin
 /Src/NReadability/_ReSharper.NReadability

@@ -86,12 +86,6 @@
     <Compile Include="SgmlDomBuilderTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NReadability\NReadability.csproj">
-      <Project>{0CCC740D-2907-437B-B5FF-F473DFA02382}</Project>
-      <Name>NReadability</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="SampleInput\SampleInput_15.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
