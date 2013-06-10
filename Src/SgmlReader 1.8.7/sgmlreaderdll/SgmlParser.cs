@@ -799,7 +799,15 @@ namespace Sgml {
             }
 
             // NOTE (steveb): we need to use ConvertFromUtf32 to allow for extended numeric encodings
-            return char.ConvertFromUtf32(v);
+            string chRet = "";
+            try
+            {
+                chRet = char.ConvertFromUtf32(v);
+            }
+            catch (Exception e)
+            {
+            }
+            return chRet;
         }
 
         static int[] CtrlMap = new int[] {
