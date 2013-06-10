@@ -91,7 +91,7 @@ namespace Sgml {
         /// </summary>
         /// <param name="info">The <see cref="SerializationInfo"/> to populate with data. </param>
         /// <param name="context">The destination (see <see cref="StreamingContext"/>) for this serialization.</param>
-        [SecurityPermission(SecurityAction.Demand, SerializationFormatter=true)]
+        //[SecurityPermission(SecurityAction.Demand, SerializationFormatter=true)]
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             if (info == null)

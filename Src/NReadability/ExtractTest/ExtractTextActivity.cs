@@ -22,7 +22,7 @@ namespace ExtractTest
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
             String strOrig =
-                "http://www.npr.org/blogs/codeswitch/2013/06/05/188914328/the-first-lady-a-heckler-and-public-dissent";
+                "file:///sdcard/Hyperionics/atVoice/RussianTest.html";
             String strClean = GetPageClean(strOrig);
             var wbc = FindViewById<WebView>(Resource.Id.webView1);
             wbc.LoadData(strClean, "text/html; charset=UTF-8", "UTF-8");
@@ -47,7 +47,6 @@ namespace ExtractTest
         {
             var client = new WebClient();
 
-
             // Add a user agent header in case the 
             // requested URI contains a query.
             // client.Headers.Add("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)");
@@ -59,10 +58,10 @@ namespace ExtractTest
             reader.Close();
 
             var nReadabilityTranscoder = new NReadabilityTranscoder();
-            bool mainContentExtracted;
-
-            String strClean = nReadabilityTranscoder.Transcode(strRaw, out mainContentExtracted);
-            return strClean;
+            TranscodingResult res = nReadabilityTranscoder.Transcode(new TranscodingInput(strRaw));
+            if (res != null && res.ContentExtracted)
+                return res.ExtractedContent;
+            return null;
         }
     }
 
