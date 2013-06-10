@@ -56,9 +56,6 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SgmlReaderDll, Version=1.8.8.30578, Culture=neutral, PublicKeyToken=46b2db9ca481831b, processorArchitecture=MSIL">
-      <HintPath>..\..\..\Lib\SgmlReader\SgmlReaderDll.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -117,6 +114,12 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SgmlReader 1.8.7\sgmlreaderdll\SgmlReaderDll9.csproj">
+      <Project>{499527ff-ae52-450f-b3e3-4ad53e1712ad}</Project>
+      <Name>SgmlReaderDll9</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
